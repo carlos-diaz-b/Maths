@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AddingQuestion.h"
 
-float getUserInput(int answer, NSString *prompt){
-    if (answer == answer){
-        NSLog(@"Right");
-    } else {
-        NSLog(@"Wrong");
+
+int getUserInput(int answer, NSString *prompt){
+   if (answer < 1){
+      answer = 1000;
     }
 
 
@@ -22,29 +22,40 @@ float getUserInput(int answer, NSString *prompt){
   if(result != NULL){
     NSString *theString = [[NSString stringWithUTF8String:inputChars]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
-    return [theString floatValue];
+    return [theString intValue];
   }
   return 0.0;
 }
 
-
-
-
-
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-    float question1 = getUserInput(6, @"\n 2 * 3:");
-    float question2 = getUserInput(50, @"\n  5 * 10:");
-    float question3 = getUserInput(80, @"\n 20 * 4:");
-    float question4 = getUserInput(27, @"\n 5 + 22:");
-    float question5 = getUserInput(880, @"\n 220 * 4:");
-    float question6 = getUserInput(102, @"\n 34 * 3:");
-    float question7 = getUserInput(8, @"\n 12 - 4:");
-       
          
-    return 0;
-    }
-}
+        int count = 0;
+        int right = 0;
+        int wrong = 0;
+        
+        NSString *operator = @"+";
+        while (count < 2) {
+            int rn1 = arc4random_uniform(100);
+            int rn2 = arc4random_uniform(50);
+            
+            NSString *back = [NSString stringWithFormat:@"%i %@  %i", rn1, operator, rn2];
+            NSLog(@"%@", back);
+            int user_input = getUserInput(1000, @"Answer");
+            if (user_input == rn1 + rn2) {
+                right += 1;
+                     
+            }else {
+                wrong += 1;
+                    
+            }
+            count += 1;
+            
+        
+        }
 
+    NSLog(@"%i", right);
+    NSLog(@"%i", wrong);
+    }
+    return 0;
+}

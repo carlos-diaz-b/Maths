@@ -12,9 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddingQuestion : NSObject
 
-@property (nonatomic, assign) float Question;
+@property (nonatomic, assign) int rand1;
+@property (nonatomic, assign) int rand2;
 
-- (instancetype)initAddingQuestion: (float)  question  andQuestion : (NSString*) Question ;
+
+- (instancetype)initRandom1: (int)  rand1  andrand2 : (int) rand2 ;
 
 
 @end

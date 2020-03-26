@@ -7,19 +7,30 @@
 //
 
 #import "AddingQuestion.h"
+@interface AddingQuestion(){
+    
+}
+@end
 
 @implementation AddingQuestion{
     
-}
-- (instancetype)initAddingQuestion: (float)  question  andQuestion : (NSString*) Question ;
+  
+    }
+    
+
+
+- (instancetype)initRandom1: (int)  rand1  andrand2 : (int) rand2 ;
 {
   self = [super init];
   if (self) {
-      _Question = question;
+      _rand1 = rand1;
+      _rand2 = rand2;
+      
    
   }
   return self;
 }
+
 
 
 @end
