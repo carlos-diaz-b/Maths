@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface AddingQuestion : NSObject
 
-@property (nonatomic, assign) int rand1;
-@property (nonatomic, assign) int rand2;
+@property (nonatomic, assign) int RandNum1;
+@property (nonatomic, assign) int RandNum2;
+@property (nonatomic, strong) NSDate* starttime;
+@property (nonatomic, strong) NSDate* endtime;
 
 
-- (instancetype)initRandom1: (int)  rand1  andrand2 : (int) rand2 ;
 
-
+- (instancetype) initWithRandNum1:(int) RandNum1 andRandNum2:(int) RandNum2;
+- (BOOL) sum:(int) ans;
+- (int) ScoreKeeper:(int) r andW: (int) w;
+- (int) initwithstarttime:(NSDate*) starttime andendtime: (NSDate*) endtime;
+- (NSTimeInterval)timetoAnswer;
 @end
-
-NS_ASSUME_NONNULL_END

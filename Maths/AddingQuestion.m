@@ -6,31 +6,43 @@
 //  Copyright © 2020 Carlos andres Diaz bravo . All rights reserved.
 //
 
+
 #import "AddingQuestion.h"
+
+
 @interface AddingQuestion(){
-    
 }
 @end
 
 @implementation AddingQuestion{
-    
-  
+}
+- (instancetype) initWithRandNum1:(int) RandNum1 andRandNum2:(int) RandNum2{
+    self = [super init];
+    if (self){
+        _RandNum1 = RandNum1;
+        _RandNum2 = RandNum2;
     }
-    
-
-
-- (instancetype)initRandom1: (int)  rand1  andrand2 : (int) rand2 ;
-{
-  self = [super init];
-  if (self) {
-      _rand1 = rand1;
-      _rand2 = rand2;
-      
-   
-  }
-  return self;
+    return self;
 }
 
+- (BOOL) sum:(int) ans{
+    if(_RandNum1 + _RandNum2 == ans ){
+        return true;
+    }
+    return false;
+}
 
+- (int) ScoreKeeper:(int) r andW: (int) w{
+    return (r * 100)/(r + w);
+}
+
+- (int) initwithstarttime:(NSDate*) starttime andendtime: (NSDate*) endtime;{
+    return 0;
+}
+
+- (NSInteger) sum {
+    _endtime = [NSDate date];
+    return _starttime;
+}
 
 @end
