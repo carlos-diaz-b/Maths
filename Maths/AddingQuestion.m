@@ -16,33 +16,32 @@
 
 @implementation AddingQuestion{
 }
-- (instancetype) initWithRandNum1:(int) RandNum1 andRandNum2:(int) RandNum2{
+- (instancetype) initWithRandNum1:(int) RandNum1 andRandNum2:(int) RandNum2 andstartTime:(NSDate*) startTime{
     self = [super init];
     if (self){
         _RandNum1 = RandNum1;
         _RandNum2 = RandNum2;
+        _startTime = [NSDate date];
     }
     return self;
 }
 
-- (BOOL) sum:(int) ans{
+- (BOOL) answer:(int) ans{
+    _endtime = [NSDate date];
     if(_RandNum1 + _RandNum2 == ans ){
         return true;
     }
     return false;
 }
 
+
+- (NSTimeInterval) answerTime:(NSDate*) anotherDate{
+    [self answerTime:anotherDate];
+    return [[NSDate date] timeIntervalSinceDate:anotherDate];
+}
+                                           
 - (int) ScoreKeeper:(int) r andW: (int) w{
     return (r * 100)/(r + w);
-}
-
-- (int) initwithstarttime:(NSDate*) starttime andendtime: (NSDate*) endtime;{
-    return 0;
-}
-
-- (NSInteger) sum {
-    _endtime = [NSDate date];
-    return _starttime;
 }
 
 @end

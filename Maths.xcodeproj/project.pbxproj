@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F662695D242C30E100F9755F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F662695C242C30E100F9755F /* main.m */; };
-		F6626964242C316D00F9755F /* main (2).m in Sources */ = {isa = PBXBuildFile; fileRef = F6626963242C316D00F9755F /* main (2).m */; };
 		F662696B242C359500F9755F /* AddingQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F662696A242C359500F9755F /* AddingQuestion.m */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		F6626959242C30E100F9755F /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		F662695C242C30E100F9755F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6626963242C316D00F9755F /* main (2).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "main (2).m"; path = "../../../../Downloads/main (2).m"; sourceTree = "<group>"; };
 		F6626969242C359500F9755F /* AddingQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingQuestion.h; sourceTree = "<group>"; };
 		F662696A242C359500F9755F /* AddingQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddingQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +60,6 @@
 		F662695B242C30E100F9755F /* Maths */ = {
 			isa = PBXGroup;
 			children = (
-				F6626963242C316D00F9755F /* main (2).m */,
 				F662695C242C30E100F9755F /* main.m */,
 				F6626969242C359500F9755F /* AddingQuestion.h */,
 				F662696A242C359500F9755F /* AddingQuestion.m */,
@@ -129,7 +126,6 @@
 			files = (
 				F662695D242C30E100F9755F /* main.m in Sources */,
 				F662696B242C359500F9755F /* AddingQuestion.m in Sources */,
-				F6626964242C316D00F9755F /* main (2).m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
